@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "420511043137",
+    "firebase_url": "https://horror-stories-718c5.firebaseio.com",
+    "project_id": "horror-stories-718c5",
+    "storage_bucket": "horror-stories-718c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420511043137:android:a65221d6d17fcb62",
+        "android_client_info": {
+          "package_name": "com.example.radioactive.horrorstories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420511043137-966ct66f0j7cnv0jv9a2751f21g9tede.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp-gbb7S8xnmkGWoX6rzxfrf361hAhtS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
