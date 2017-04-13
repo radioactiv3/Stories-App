@@ -31,10 +31,12 @@ TextView HorrorStoryText;
 
         super.onCreate(savedInstances);
         setContentView(R.layout.activity_horrorstory_1);
+
         HorrorStoryText =(TextView) findViewById(R.id.HorrorStoryMainText);
         //HorrorStoryText.setMovementMethod();
         Intent intent = getIntent();
         String SelectedStory = myMap.get(intent.getStringExtra("selected-item"));
+        setTitle(SelectedStory);
         HorrorStoryText.setText(SelectedStory);
         HorrorStoryText.setMovementMethod(new ScrollingMovementMethod());
 

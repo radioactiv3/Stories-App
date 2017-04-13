@@ -16,7 +16,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".HorrorStoryActivity" android:exported="true"></activity>
+        <activity android:name=".HorrorStoryActivity"
+            android:exported="true"
+            android:label="+@string/StoryTitle">
+         </activity>
+        <activity android:name=".GridViewActivity"
+            android:exported="true">
+
+        </activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
             <action android:name="android.intent.action.MAIN" />
