@@ -5,11 +5,16 @@ package com.example.radioactive.horrorstories;
  */
 import android.app.Activity;
 import android.content.Intent;
-
+import java.lang.Object;
 import android.os.Bundle;
 
 
+import android.text.method.MovementMethod;
+import android.text.method.ScrollingMovementMethod;
+import android.widget.ScrollView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.HashMap;
 
@@ -26,10 +31,12 @@ TextView HorrorStoryText;
 
         super.onCreate(savedInstances);
         setContentView(R.layout.activity_horrorstory_1);
-        HorrorStoryText =(TextView)findViewById(R.id.HorrorStoryMainText);
+        HorrorStoryText =(TextView) findViewById(R.id.HorrorStoryMainText);
+        //HorrorStoryText.setMovementMethod();
         Intent intent = getIntent();
         String SelectedStory = myMap.get(intent.getStringExtra("selected-item"));
         HorrorStoryText.setText(SelectedStory);
+        HorrorStoryText.setMovementMethod(new ScrollingMovementMethod());
 
     }
 

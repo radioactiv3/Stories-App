@@ -1,5 +1,6 @@
 package com.example.radioactive.horrorstories;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
-public class Home extends AppCompatActivity {
+public class Home extends Activity {
 
     ListView StoryList;
     String[] Stories;
@@ -19,9 +20,9 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        StoryList = (ListView) findViewById(R.id.HorrorstoryList);
+         StoryList = (ListView) findViewById(R.id.HorrorstoryList);
         String[] Stories = (String[]) getResources().getStringArray(R.array.Story_title);
-        /*int[] countriesCodes = getResources().getIntArray(R.array.countries_codes);*/
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.activity_shortstories,
                 R.id.horrorStoryHomeText, Stories);
         StoryList.setAdapter(adapter);

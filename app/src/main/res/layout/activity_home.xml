@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BBDEFB"
     tools:context="com.example.radioactive.horrorstories.Home">
 
 
@@ -11,6 +12,7 @@
         android:id="@+id/HorrorstoryList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp" />
 </android.support.constraint.ConstraintLayout>
