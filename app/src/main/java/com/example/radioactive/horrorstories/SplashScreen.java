@@ -43,7 +43,7 @@ public class SplashScreen extends Activity {
             public void onAnimationEnd(Animation animation){
                 SplahLogo.startAnimation(Anim3);
                 finish();
-                Intent mainActivity = new Intent(getBaseContext(),Home.class);
+                Intent mainActivity = new Intent(getBaseContext(),GridViewActivity.class);
                 startActivity(mainActivity);
             }
             @Override

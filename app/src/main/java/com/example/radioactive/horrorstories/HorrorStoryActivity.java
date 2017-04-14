@@ -22,8 +22,8 @@ public class HorrorStoryActivity extends Activity {
 TextView HorrorStoryText;
     @Override
     protected void onCreate(Bundle savedInstances){
-        String[] StoryTitles = (String[]) getResources().getStringArray(R.array.Story_title);
-        String[] Full_story = (String[]) getResources().getStringArray(R.array.Full_Story);
+        final String[] StoryTitles = (String[]) getResources().getStringArray(R.array.Story_title_demon);
+        final String[] Full_story = (String[]) getResources().getStringArray(R.array.Full_Story);
         HashMap<String,String> myMap = new HashMap<String,String>();
         for (int i = 0; i < StoryTitles.length; i++) {
             myMap.put(StoryTitles[i],Full_story[i]);

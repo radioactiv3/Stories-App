@@ -36,10 +36,10 @@ public class GridViewActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent,View view,int i ,long Id)
             {
                 Intent intent = new Intent(GridViewActivity.this, Home.class);
-                intent.putExtra("selected-item", CataegoryType[+i]);
+                intent.putExtra("selected-cataegory",CataegoryType[+i]);
                 startActivity(intent);
                 Log.i("now raise a toast honey",""+ CataegoryType[+i]);
-                Toast.makeText(GridViewActivity.this, "GridView Item: " + CataegoryType[+i], Toast.LENGTH_LONG).show();
+                Toast.makeText(GridViewActivity.this, "GridView Item: " +i, Toast.LENGTH_LONG).show();
 
             }
         });
