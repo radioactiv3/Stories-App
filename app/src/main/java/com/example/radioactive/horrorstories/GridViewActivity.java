@@ -39,7 +39,7 @@ public class GridViewActivity extends AppCompatActivity {
                 intent.putExtra("selected-cataegory",CataegoryType[+i]);
                 startActivity(intent);
                 Log.i("now raise a toast honey",""+ CataegoryType[+i]);
-                Toast.makeText(GridViewActivity.this, "GridView Item: " +i, Toast.LENGTH_LONG).show();
+                Toast.makeText(GridViewActivity.this, "GridView Item: " +CataegoryType[+i], Toast.LENGTH_LONG).show();
 
             }
         });

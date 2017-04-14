@@ -10,37 +10,46 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class Home extends Activity {
 
     ListView StoryList;
     String[] Stories;
-
+    String SelectedCataegory;
+    String SelectedCatategory_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Intent intent = getIntent();
-        String SelectedCataegory = intent.getStringExtra("selected-cataegory");
+        SelectedCataegory = intent.getStringExtra("selected-cataegory");
          StoryList = (ListView) findViewById(R.id.HorrorstoryList);
         switch (SelectedCataegory){
             case "डायन प्रेत":
-                Stories = (String[]) getResources().getStringArray(R.array.Story_title);
+                Stories = (String[]) getResources().getStringArray(R.array.Story_title_demon);
+                SelectedCatategory_id ="0";
                 break;
-            case "डुर्दे का प्यार":
+            case "मुर्दे का प्यार":
                 Stories = (String[]) getResources().getStringArray(R.array.Story_title_deadlover);
+                SelectedCatategory_id="1";
                 break;
             case "आत्मा का साया":
                 Stories= (String[])getResources().getStringArray(R.array.Story_title_soulShadow);
+                SelectedCatategory_id="2";
                 break;
             case "शापित हवेली":
                 Stories= (String[])getResources().getStringArray(R.array.Story_title_hauntedHouse);
-                break;
+                SelectedCatategory_id="3";
+                                break;
             case "शमशान घाट":
-                Stories= (String[])getResources().getStringArray(R.array.Story_title_graveyard);
+                Stories =(String[])getResources().getStringArray(R.array.Story_title_graveyard);
+                SelectedCatategory_id="4";
                 break;
             default:
-                 Stories = (String[]) getResources().getStringArray(R.array.Story_title_demon);
+                 Stories = (String[]) getResources().getStringArray(R.array.Story_title_deadlyToy);
+                SelectedCatategory_id= "5";
 
         }
 
@@ -57,11 +66,14 @@ public class Home extends Activity {
 
         @Override
         public void onItemClick(AdapterView<?> adapter, View view, int position, long arg3) {
+            ArrayList<String> storyandandcategory = new ArrayList<>();
+            storyandandcategory.add(SelectedCatategory_id);
             // TODO Auto-generated method stub
             TextView listText = (TextView) view.findViewById(R.id.horrorStoryHomeText);
             String text = listText.getText().toString();
+            storyandandcategory.add(text);
             Intent intent = new Intent(Home.this, HorrorStoryActivity.class);
-            intent.putExtra("selected-item", text);
+            intent.putStringArrayListExtra("selected-item", storyandandcategory);
             startActivity(intent);
 
         }
